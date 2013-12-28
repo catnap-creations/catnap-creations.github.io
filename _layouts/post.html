@@ -1,5 +1,79 @@
 ---
-layout: default
+layout: base
 ---
-{% include JB/setup %}
-{% include themes/twitter/post.html %}
+
+<div id="breadcrumbs"><a href="/" title="Home">Catnap-Creations</a> &raquo; {{ page.title }}</div>
+
+<article class="wpsc-product type-wpsc-product status-publish hentry">
+
+<div id="single_product_page_container">
+<div class="single_product_display group">
+
+<div class="imagecol">
+
+<ul id="mycarousel" class="jcarousel-skin-tango">
+
+  <li class="image-item-carousel">
+  	<a rev="/images/{{ page.img_one }}-mid.jpg" href="/images/{{ page.img_one }}.jpg"
+       class="thickbox" rel="{{ page.title }}">
+  		<img src="/images/{{ page.img_one }}-thumb.jpg" class="images-gallery-thumbnails" />
+  	</a>
+  </li>
+
+  <li class="image-item-carousel">
+  	<a rev="/images/{{ page.img_two }}-mid.jpg" href="/images/{{ page.img_two }}.jpg"
+       class="thickbox" rel="{{ page.title }}">
+  		<img src="/images/{{ page.img_two }}-thumb.jpg" class="images-gallery-thumbnails" />
+  	</a>
+  </li>
+
+  <li class="image-item-carousel">
+  	<a rev="/images/{{ page.img_three }}-mid.jpg" href="/images/{{ page.img_three }}.jpg"
+       class="thickbox" rel="{{ page.title }}">
+  		<img src="/images/{{ page.img_three }}-thumb.jpg" class="images-gallery-thumbnails" />
+  	</a>
+  </li>
+
+</ul><!-- end thumb-wrap" -->
+
+
+<a rel="{{ page.title }}" class="thickbox preview_link" href="/images/{{ page.img_one}}.jpg">
+<img class="product_image" alt="{{ page.title }}" title="{{ page.title }}" src="/images/{{ page.img_one }}-mid.jpg"/>
+</a>
+
+</div><!--close imagecol-->
+
+
+<div class="productcol">
+<header><h1 class="prod-title">{{ page.title }}</h1></header>
+<span class="currentprice pricedisplay">{{ page.price }}</span>
+
+<div id="description-tabs">
+  <ul>
+  <li><a href="#description"><span>Description</span></a></li>
+  </ul>
+  <div id="description">
+    <div class="product_description">
+    {{ content }}
+    </div>
+  </div>
+</div> <!-- description-tabs -->
+
+<div class="product_form">
+<div class="wpsc_product_price">
+<div class="wpsc_product_price_inside">
+  <span class="wpsc_product_price_left">
+	<p class="pricedisplay"><strong>Price: </strong><span class="pp_price">{{ page.price }}</span></p>
+    <p class="pricedisplay"><strong>Shipping: </strong><span class="pp_price">{{ page.shipping }}</span></p>
+  </span> <!-- end .wpsc_product_price_left -->
+</div>
+</div><!--close wpsc_product_price-->
+</div>
+
+</div><!--close productcol-->
+
+
+
+</div><!--close single_product_display-->
+</div><!--close single_product_page_container-->
+</article>

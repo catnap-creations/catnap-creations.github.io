@@ -1,0 +1,22 @@
+---
+layout: base
+---
+
+<div id="default_products_page_container" class="wrap wpsc_container product">
+
+<div class="wpsc_default_product_list">
+
+{% for post in site.posts %}
+  <a href="{{ post.url }}">
+  <div class="default_product_display all-categories group">
+  <div class="imagecol" style="width:148;">
+  <img class="product_image" alt="{{ post.title }}" title="{{ post.title }}" src="/images/{{ post.thumb }}"/>
+  </div>
+  <h2 class="prodtitle entry-title">{{ post.title }}</h2>
+  <p class="pricedisplay">Price: <span class="currentprice pricedisplay">{{ post.price }}</span></p>
+  </div> <!-- default_product_display -->
+  </a>
+{% endfor %}
+
+</div> <!-- wpsc_default_product_list -->
+</div> <!-- default_products_page_container -->
